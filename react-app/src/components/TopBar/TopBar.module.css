@@ -1,0 +1,19 @@
+.topBarContainer {
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 16px;
+  border-bottom: 1px solid lightgray;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+}
+
+.profileContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
