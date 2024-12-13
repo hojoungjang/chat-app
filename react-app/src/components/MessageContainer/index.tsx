@@ -50,7 +50,11 @@ const MessageContainer = () => {
           }}
           value={messageInput}
           onKeyDown={(e) => {
-            if (e.key == "Enter" && messageInput) {
+            if (
+              e.key == "Enter" &&
+              messageInput &&
+              !e.nativeEvent.isComposing
+            ) {
               console.log(messageInput);
               sendMessage();
             }

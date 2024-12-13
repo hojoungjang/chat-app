@@ -1,3 +1,4 @@
+import { useUserInfoContext } from "../../contexts/userInfo.context";
 import ProfileAvatar from "../ProfileAvatar";
 
 import styles from "./TopBar.module.css";
@@ -7,14 +8,15 @@ type TopBarProps = {
 };
 
 const TopBar = (props: TopBarProps) => {
-  const { username = "Brian" } = props;
+  // const { username = "Brian" } = props;
+  const { name } = useUserInfoContext();
 
   return (
     <div className={styles.topBarContainer}>
       <div className={styles.title}>My Chat</div>
       <div className={styles.profileContainer}>
         <ProfileAvatar />
-        <div>{username}</div>
+        <div>{name}</div>
       </div>
     </div>
   );
